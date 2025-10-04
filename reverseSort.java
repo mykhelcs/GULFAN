@@ -1,12 +1,12 @@
 import java.util.Stack;
 
-public class Stack {
+public class reverseSort {
 
-    public static Stack<INTEGER> sortedStack(Stack<INTEGER> stack) {
+    public static Stack<Integer> sortedStack(Stack<Integer> stack) {
         Stack<Integer> tempStack = new Stack<>();
         while (!stack.isEmpty()) {
             int current = stack.pop();
-            while (!tempStack.isEmpty() && tempStack.peek() > current) {
+            while (!tempStack.isEmpty() && tempStack.peek() < current) {
                 stack.push(tempStack.pop());
             }
             tempStack.push(current);
