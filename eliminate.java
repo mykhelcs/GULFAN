@@ -3,8 +3,6 @@ import java.util.Queue;
 
 public class eliminate {
 
-    
-
     public static void main(String[] args) {
         Queue<Integer> myQueue = new LinkedList<>();
         myQueue.offer(1);
