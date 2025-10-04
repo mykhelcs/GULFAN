@@ -19,5 +19,21 @@ public class duplicate {
         System.out.println("Removed Duplicate stack: " + duplicate);
     }
 
-    
+    public static Stack<Integer> duplicateStack(Stack<Integer> stack) {
+        Stack<Integer> stackFinal = new Stack<>();
+        List<Integer> list = new ArrayList<>(stack);
+        List<Integer> finalList = new ArrayList<>();
+
+        for (int num : list) {
+            if (!finalList.contains(num)) {
+                finalList.add(num);
+            }
+        }
+
+        // Push elements in reverse order to preserve stack order
+        for (int i = finalList.size() - 1; i >= 0; i--) {
+            stackFinal.push(finalList.get(i));
+        }
+        return stackFinal;
+    }
 }
